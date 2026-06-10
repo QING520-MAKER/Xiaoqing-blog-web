@@ -96,9 +96,11 @@ export default function AdminUsersPage() {
       setActionError("");
       await updateUserStatus(userId, { status: newStatus });
       fetchUsers();
+
       return true;
     } catch (e: unknown) {
       setActionError(e instanceof Error ? e.message : "操作失败");
+
       return false;
     }
   };
@@ -256,7 +258,9 @@ export default function AdminUsersPage() {
                     禁用后该用户将无法登录/刷新会话，并会在鉴权时被拒绝访问需要登录的接口。
                   </div>
                 </div>
-                {actionError && <p className="text-danger text-sm">{actionError}</p>}
+                {actionError && (
+                  <p className="text-danger text-sm">{actionError}</p>
+                )}
               </ModalBody>
               <ModalFooter>
                 <Button
@@ -280,6 +284,7 @@ export default function AdminUsersPage() {
                         pendingDisableUser.id,
                         "disabled",
                       );
+
                       if (ok) onClose();
                     } finally {
                       setConfirmingDisable(false);

@@ -265,7 +265,9 @@ export default function AdminFilesPage() {
             <div className="rounded-lg bg-danger-50 p-3 text-sm text-danger-700 dark:bg-danger-50/10 dark:text-danger-400">
               将同时删除对象存储与元数据，且不可恢复。
             </div>
-            {deleteError && <p className="text-danger text-sm">{deleteError}</p>}
+            {deleteError && (
+              <p className="text-danger text-sm">{deleteError}</p>
+            )}
           </ModalBody>
           <ModalFooter>
             <Button

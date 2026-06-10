@@ -1,4 +1,4 @@
-# 前端项目规范（nimbus-blog-web）
+# 前端项目规范（Xiaoqing-blog-web）
 
 ## 一、技术栈
 
@@ -18,7 +18,7 @@
 ## 二、目录结构
 
 ```
-nimbus-blog-web/
+Xiaoqing-blog-web/
 ├── app/                       # Next.js App Router 路由层
 │   ├── layout.tsx             # 根 Layout（Providers 包裹）
 │   ├── providers.tsx          # 全局 Provider（HeroUI / Theme / 条件 UserAuth）

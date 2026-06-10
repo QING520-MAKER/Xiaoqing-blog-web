@@ -377,7 +377,9 @@ export default function AdminLinksPage() {
                   value={editDescription}
                   onValueChange={setEditDescription}
                 />
-                {editError && <p className="text-danger text-sm">{editError}</p>}
+                {editError && (
+                  <p className="text-danger text-sm">{editError}</p>
+                )}
               </ModalBody>
               <ModalFooter>
                 <Button variant="light" onPress={() => setEditOpen(false)}>
@@ -417,7 +419,9 @@ export default function AdminLinksPage() {
             <div className="rounded-lg bg-danger-50 p-3 text-sm text-danger-700 dark:bg-danger-50/10 dark:text-danger-400">
               删除后不可恢复。
             </div>
-            {deleteError && <p className="text-danger text-sm">{deleteError}</p>}
+            {deleteError && (
+              <p className="text-danger text-sm">{deleteError}</p>
+            )}
           </ModalBody>
           <ModalFooter>
             <Button

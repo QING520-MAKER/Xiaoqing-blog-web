@@ -190,32 +190,32 @@ export default function AdminPostsPage() {
             }}
           >
             <TableHeader>
-            <TableColumn className="w-16 whitespace-nowrap">ID</TableColumn>
-            <TableColumn className="min-w-0">标题</TableColumn>
-            <TableColumn className="w-28 whitespace-nowrap">状态</TableColumn>
-            <TableColumn className="w-28 whitespace-nowrap">分类</TableColumn>
-            <TableColumn
-              key="views"
-              allowsSorting
-              className="w-16 whitespace-nowrap"
-            >
-              浏览
-            </TableColumn>
-            <TableColumn
-              key="likes"
-              allowsSorting
-              className="w-16 whitespace-nowrap"
-            >
-              点赞
-            </TableColumn>
-            <TableColumn
-              key="created_at"
-              allowsSorting
-              className="w-28 whitespace-nowrap"
-            >
-              发布时间
-            </TableColumn>
-            <TableColumn className="w-28 whitespace-nowrap">操作</TableColumn>
+              <TableColumn className="w-16 whitespace-nowrap">ID</TableColumn>
+              <TableColumn className="min-w-0">标题</TableColumn>
+              <TableColumn className="w-28 whitespace-nowrap">状态</TableColumn>
+              <TableColumn className="w-28 whitespace-nowrap">分类</TableColumn>
+              <TableColumn
+                key="views"
+                allowsSorting
+                className="w-16 whitespace-nowrap"
+              >
+                浏览
+              </TableColumn>
+              <TableColumn
+                key="likes"
+                allowsSorting
+                className="w-16 whitespace-nowrap"
+              >
+                点赞
+              </TableColumn>
+              <TableColumn
+                key="created_at"
+                allowsSorting
+                className="w-28 whitespace-nowrap"
+              >
+                发布时间
+              </TableColumn>
+              <TableColumn className="w-28 whitespace-nowrap">操作</TableColumn>
             </TableHeader>
             <TableBody emptyContent="暂无文章">
               {posts.map((post) => (
@@ -228,14 +228,19 @@ export default function AdminPostsPage() {
                       color="foreground"
                       href={`/admin/posts/${post.id}`}
                     >
-                      <span className="block w-full truncate" title={post.title}>
+                      <span
+                        className="block w-full truncate"
+                        title={post.title}
+                      >
                         {post.title}
                       </span>
                     </Link>
                   </TableCell>
                   <TableCell>
                     <Chip
-                      color={post.status === "published" ? "success" : "default"}
+                      color={
+                        post.status === "published" ? "success" : "default"
+                      }
                       size="sm"
                       variant="flat"
                     >

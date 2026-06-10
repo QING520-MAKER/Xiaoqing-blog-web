@@ -35,7 +35,9 @@ import { SearchIcon, DeleteIcon, EditIcon } from "@/components/common/icons";
 const PAGE_SIZE = 12;
 
 export default function TaxonomyPage() {
-  const [activeTab, setActiveTab] = useState<"categories" | "tags">("categories");
+  const [activeTab, setActiveTab] = useState<"categories" | "tags">(
+    "categories",
+  );
   const [categories, setCategories] = useState<CategoryDetail[]>([]);
   const [tags, setTags] = useState<TagDetail[]>([]);
   const [loading, setLoading] = useState(true);
@@ -288,9 +290,7 @@ export default function TaxonomyPage() {
       <Tabs
         aria-label="Taxonomy tabs"
         selectedKey={activeTab}
-        onSelectionChange={(key) =>
-          setActiveTab(key as "categories" | "tags")
-        }
+        onSelectionChange={(key) => setActiveTab(key as "categories" | "tags")}
       >
         <Tab key="categories" title="分类">
           <div className="space-y-3">
@@ -556,7 +556,9 @@ export default function TaxonomyPage() {
             <div className="rounded-lg bg-danger-50 p-3 text-sm text-danger-700 dark:bg-danger-50/10 dark:text-danger-400">
               删除后不可恢复。
             </div>
-            {deleteError && <p className="text-danger text-sm">{deleteError}</p>}
+            {deleteError && (
+              <p className="text-danger text-sm">{deleteError}</p>
+            )}
           </ModalBody>
           <ModalFooter>
             <Button

@@ -256,7 +256,9 @@ export default function AdminCommentsPage() {
             <div className="rounded-lg bg-danger-50 p-3 text-sm text-danger-700 dark:bg-danger-50/10 dark:text-danger-400">
               删除后不可恢复。
             </div>
-            {actionError && <p className="text-danger text-sm">{actionError}</p>}
+            {actionError && (
+              <p className="text-danger text-sm">{actionError}</p>
+            )}
           </ModalBody>
           <ModalFooter>
             <Button
